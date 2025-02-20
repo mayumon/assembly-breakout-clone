@@ -1,83 +1,85 @@
-# °•. Breakout Clone on Assembly .•°
+# assembly breakout clone .•°
 
-Play a classic breakout-style game with a friend - or by yourself, it's still fun!
+play a classic breakout-style game with a friend - or by yourself, it's still fun!!
 
 <p align="center">
   <img width="453" alt="image" src="https://github.com/mayumon/assembly-breakout-clone/assets/113377248/65c8aabb-5c68-4a47-a544-6708a9fb6a53">
   </p>
 
-The goal of the game is to use the paddles to bounce a ball against a wall of bricks while preventing the ball from falling below the paddle. You have three lives, so you can drop the ball a couple of times before you lose, don't worry.
+the goal of the game is to use the paddles to bounce a ball against a wall of bricks while preventing the ball from falling below the paddle. 
 
-This was a simple but long project with collision detection, bright graphics, and MIDI sounds I made to learn more about MIPS. There is also a secret evil mode!!
+you have three lives, so you can drop the ball a couple of times before you lose.
 
-## $\textcolor{#B6B2FF}{✩ \ Setup}$
+this was a simple but long project with collision detection, bright graphics, and MIDI sounds I made to learn more about MIPS.
 
-Open the game file on MARS MIPS simulator.
+## $\textcolor{#B6B2FF}{✩ \ setup}$
 
----
-
-#### $\textcolor{#E1DCFF}{✦ \ Display}$
-
-Open the Bitmap Display window from the "Tools" menu.
-
-Connect it to MIPS then configure it with the following values:
-
-* Unit width in pixels: 8
-* Unit height in pixels: 8
-* Display width in pixels: 256
-* Display height in pixels: 256
-* Base Address for Display: 0x10008000 ($gp)
-
-The display will allow you to see the game.
+open the game file on MARS MIPS simulator.
 
 ---
 
-#### $\textcolor{#E1DCFF}{✦ \ Keyboard}$
+#### $\textcolor{#E1DCFF}{✦ \ display}$
 
-Open the Keyboard and Display MMIO Simulator from the "Tools".
+open the Bitmap Display window from the "Tools" menu.
 
-Connect it to MIPS.
+connect it to MIPS then configure it with the following values:
 
-The keyboard will allow you to make inputs and move the paddles. To do so, you will write on the lower text box.
+  * Unit width in pixels: 8
+  * Unit height in pixels: 8
+  * Display width in pixels: 256
+  * Display height in pixels: 256
+  * Base Address for Display: 0x10008000 ($gp)
+
+you will see the game through this window.
 
 ---
 
-#### $\textcolor{#E1DCFF}{✦ \ Assemble \ and \ Play!}$
+#### $\textcolor{#E1DCFF}{✦ \ keyboard}$
 
-Press F3/Assemble to assemble the game file.
+open the Keyboard and Display MMIO Simulator from the "Tools".
 
-When you are ready to play, press the Run/Go button.
+connect it to MIPS.
+
+you will write your inputs on the lower text box.
+
+---
+
+#### $\textcolor{#E1DCFF}{✦ \ assemble \ and \ play!}$
+
+press F3/Assemble to assemble the game file.
+
+when you are ready to play, press the Run/Go button.
 
 <br/><br/>
 
-## $\textcolor{#B6B2FF}{✩ \ Controls}$
+## $\textcolor{#B6B2FF}{✩ \ controls}$
 
-Pause - P
+pause - P
 
-Reset - R
+reset - R
 
 ??? - H
 
 ---
 
-#### $\textcolor{#E1DCFF}{✦ \ Bottom Paddle }$
-Move left - A
+#### $\textcolor{#E1DCFF}{✦ \ bottom \ paddle }$
+move left - A
 
-Move right - D
+move right - D
 
 ---
 
-#### $\textcolor{#E1DCFF}{✦ \ Top Paddle }$
-Move left - J
+#### $\textcolor{#E1DCFF}{✦ \ top \ paddle }$
+move left - J
 
-Move left - L
+move left - L
 
+<br/><br/>
 
+## $\textcolor{#B6B2FF}{✩ \ help }$ 
 
-## $\textcolor{#B6B2FF}{✩ \ Help }$ 
+if the movement of the ball is abnormally fast/slow, read and modify lines 243-246 of the game file.
 
-If the movement of the ball is abnormally fast/slow, read and modify lines 243-246 of the game file.
+if the game seems unresponsive, assemble and run the file again. ensure keyboard simulator and bitmap display are connected to MIPS.
 
-If the game seems unresponsive, assemble and run the file again. Ensure keyboard simulator and bitmap display are connected to MIPS.
-
-For any other issues, please reach out!
+for any other issues, reach out.
